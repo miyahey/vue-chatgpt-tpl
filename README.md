@@ -1,5 +1,22 @@
 # vue-chatgpt-tpl
 
+## Bio
+
+A ChatGPT template based on OpenAI API (gpt-3.5-turbo).
+
+## Configuration Guide
+
+Input the following parameters when configuring the template
+
+- PageTitle
+- Bio
+- OpenAI API Key
+- Logo
+- Avatar
+- Button Link
+
+![Demo Image](https://markdown.4everland.store/6.png)
+
 ## Project setup
 
 ```
