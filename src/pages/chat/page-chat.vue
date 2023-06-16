@@ -47,7 +47,7 @@
       </div>
     </div>
 
-    <div class="pos-r">
+    <!-- <div class="pos-r">
       <div
         class="pos-a right-0 mr-3 pa-3 hover-1"
         style="top: -56px"
@@ -56,7 +56,7 @@
       >
         <img src="img/to-btm.svg" width="30" />
       </div>
-    </div>
+    </div> -->
     <div class="send-wrap pos-r bdrs-10 ov-h">
       <textarea
         class="pa-3"
@@ -189,9 +189,9 @@ export default {
       }, delay)();
     },
     onSend() {
-      if (!this.apiKey) {
-        return;
-      }
+      // if (!this.apiKey) {
+      //   return;
+      // }
       let msg = this.inputMsg.trim();
       if (!msg) return;
       this.isBtm = true;
@@ -232,6 +232,9 @@ export default {
             msg = data.error.message || data.error.code;
           }
           console.log(msg, e);
+          if (msg == "invalid_api_key") {
+            msg = "Please config API Key [here](#/config)";
+          }
           this.onErr(msg);
         });
         source.addEventListener("abort", () => {
