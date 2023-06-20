@@ -123,7 +123,10 @@ export default {
           }
         }
         console.log(info);
-        this.info = info;
+        // this.info = info;
+        this.$setState({
+          appInfo: info,
+        });
         if (info.apiKey) {
           this.apiKey = info.apiKey;
         }
