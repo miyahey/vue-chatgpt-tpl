@@ -118,7 +118,7 @@ export default {
   data() {
     return {
       inputMsg: "",
-      msgList: this.getMsgList(),
+      msgList: [],
       lastMsg: "",
       streaming: false,
       isBtm: true,
@@ -147,6 +147,7 @@ export default {
     },
   },
   mounted() {
+    this.msgList = this.getMsgList();
     if (!this.msgList.length) {
       let msg = "Hello! How can I assist you today?";
       if (!this.apiKey) {
@@ -165,7 +166,8 @@ export default {
     },
     getMsgList() {
       const id = this.sessionId;
-      return JSON.parse(localStorage["msgList" + id] || "[]");
+      const list = JSON.parse(localStorage["msgList" + id] || "[]");
+      return list;
     },
     onScroll(e) {
       this.isBtm =

@@ -12,6 +12,7 @@ for (const key in storState) {
   let val = localStorage[key];
   if (val) storState[key] = JSON.parse(val);
 }
+console.log(storState);
 
 const store = createStore({
   state() {

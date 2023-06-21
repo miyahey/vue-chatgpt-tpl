@@ -62,11 +62,11 @@ export default {
   },
   data() {
     return {
-      newKey: JSON.parse(localStorage.apiKey || "null"),
+      newKey: this.apiKey,
     };
   },
-  mounted() {
-    if (!this.newKey) this.newKey = this.apiKey;
+  created() {
+    this.newKey = this.apiKey;
   },
   methods: {
     onSaveApiKey() {
