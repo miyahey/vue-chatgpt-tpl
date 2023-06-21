@@ -29,7 +29,7 @@
         {
           "type": "text",
           "key": "apiKey",
-          "value": "",
+          "value": "dd",
           "placeholder": "Enter OpenAI API Key",
           "regExp": "^sk-",
           "regMsg": "Malformed api key"

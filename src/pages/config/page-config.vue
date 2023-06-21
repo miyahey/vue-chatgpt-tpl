@@ -65,6 +65,9 @@ export default {
       newKey: JSON.parse(localStorage.apiKey || "null"),
     };
   },
+  mounted() {
+    if (!this.newKey) this.newKey = this.apiKey;
+  },
   methods: {
     onSaveApiKey() {
       if (!/^sk-\w{48}$/.test(this.newKey)) {

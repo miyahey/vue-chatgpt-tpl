@@ -126,10 +126,9 @@ export default {
         // this.info = info;
         this.$setState({
           appInfo: info,
+          apiKey: info.apiKey,
         });
-        if (info.apiKey) {
-          this.apiKey = info.apiKey;
-        }
+
         if (info.title) {
           document.title = info.title;
         }
