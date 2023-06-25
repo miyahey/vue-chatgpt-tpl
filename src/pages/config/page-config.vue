@@ -65,7 +65,7 @@ export default {
       newKey: this.apiKey,
     };
   },
-  created() {
+  mounted() {
     this.newKey = this.apiKey;
   },
   methods: {

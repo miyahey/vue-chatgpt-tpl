@@ -124,10 +124,13 @@ export default {
         }
         console.log(info);
         // this.info = info;
-        this.$setState({
+        const obj = {
           appInfo: info,
-          apiKey: info.apiKey,
-        });
+        };
+        if (info.apiKey) {
+          obj.apiKey = info.apiKey;
+        }
+        this.$setState(obj);
 
         if (info.title) {
           document.title = info.title;
